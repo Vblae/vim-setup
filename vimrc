@@ -283,6 +283,9 @@ nnoremap \th :set invhls hls?<CR>
 "set number
 set number
 
+"set ruler
+set ruler
+
 " * Keystrokes -- Insert Mode
 
 " allow <BkSpc> to delete line breaks, beyond the start of the current
