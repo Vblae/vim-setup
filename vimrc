@@ -283,9 +283,6 @@ nnoremap \th :set invhls hls?<CR>
 "set number
 set number
 
-"set ruler
-set ruler
-
 " * Keystrokes -- Insert Mode
 
 " allow <BkSpc> to delete line breaks, beyond the start of the current
@@ -298,6 +295,21 @@ inoremap <Tab> <C-T>
 inoremap <S-Tab> <C-D>
 " [<Ctrl>+V <Tab> still inserts an actual tab character.]
 
+" hightlight col over 89 with slight grey
+augroup vimrc_autocmds
+  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+  autocmd BufEnter * match OverLength /\%79v.*/
+augroup END
+
+" splitting stuff
+set splitbelow
+set splitright
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 syntax on
-color pencil 
+color one 
 
